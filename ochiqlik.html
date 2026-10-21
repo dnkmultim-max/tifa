@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ochiqlik — TIFA (prototip)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="ochiqlik">
+<div id="site-top"></div>
+
+<!-- SHABLON: ochiqlik bo'limi (ochiq ma'lumotlar, murojaatlar, hujjatlar, xaridlar) -->
+<div class="pagehead">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Bosh sahifa</a><span>/</span>Ochiqlik</div>
+    <h1>Ochiqlik</h1>
+    <p>Davlat ta’lim tashkiloti sifatida Akademiya faoliyati ochiq: ma’lumotlar, hujjatlar, murojaatlar va xaridlar.</p>
+  </div>
+</div>
+
+<main data-cms="documents">
+<div class="wrap layout">
+  <aside class="side" aria-label="Sahifa bo‘limlari">
+    <a href="#malumot">Ochiq ma’lumotlar</a>
+    <a href="#murojaat">Murojaatlar</a>
+    <a href="#qabulxona">Virtual qabulxona</a>
+    <a href="#korrupsiya">Korrupsiyaga qarshi kurashish</a>
+    <a href="#hujjat">Hujjatlar</a>
+    <a href="#hisobot">Hisobotlar</a>
+    <a href="#xarid">Xaridlar va tenderlar</a>
+  </aside>
+
+  <div>
+    <section class="block" id="malumot">
+      <h2>Ochiq ma’lumotlar</h2>
+      <p>Ko‘rsatkichlar HEMIS’dan avtomatik olinadi. Ma’lumot kelmasa, qiymat o‘rniga “0” emas, “yangilanmoqda” ko‘rsatiladi.</p>
+      <div class="tablewrap">
+      <table class="t">
+        <thead><tr><th>Ko‘rsatkich</th><th>Qiymat</th></tr></thead>
+        <tbody>
+          <tr><td>Talabalar soni</td><td class="ph">[HEMIS’dan]</td></tr>
+          <tr><td>Ta’lim dasturlari soni</td><td class="ph">[HEMIS’dan]</td></tr>
+          <tr><td>Guruhlar soni</td><td class="ph">[HEMIS’dan]</td></tr>
+          <tr><td>O‘qituvchilar soni</td><td class="ph">[HEMIS’dan]</td></tr>
+          <tr><td>Oxirgi yangilanish</td><td class="ph">[sana]</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <section class="block" id="murojaat">
+      <h2>Murojaatlarni ko‘rib chiqish</h2>
+      <p>Murojaatlar 3 ish kuni ichida ko‘rib chiqiladi.</p>
+      <div class="stepsrow">
+        <div class="s"><i>1</i><b>Yuborasiz</b><span>Shaklni to‘ldiring.</span></div>
+        <div class="s"><i>2</i><b>Ko‘rib chiqiladi</b><span>Mas’ul bo‘lim javob tayyorlaydi.</span></div>
+        <div class="s"><i>3</i><b>Javob olasiz</b><span>Javob 3 ish kuni ichida yuboriladi.</span></div>
+      </div>
+      <form class="form box" id="appeal" novalidate>
+        <label>Ism va familiya<input type="text" name="name" required autocomplete="name"></label>
+        <label>Telefon yoki e-pochta<input type="text" name="contact" required></label>
+        <label>Mavzu
+          <select name="topic">
+            <option>Ta’lim</option><option>Qabul</option><option>Moliya</option><option>Boshqa</option>
+          </select>
+        </label>
+        <label>Murojaat matni<textarea name="text" required></textarea></label>
+        <label class="consent"><input type="checkbox" required> Shaxsiy ma’lumotlarimni qayta ishlashga roziman.</label>
+        <button class="btn btn-primary" type="submit">Yuborish</button>
+        <div class="ok" role="status">Murojaatingiz qabul qilindi. (Namunaviy xabar: forma hali ulanmagan.)</div>
+        <p class="note">Ma’lumotlar Akademiya serverida saqlanadi.</p>
+      </form>
+    </section>
+
+    <section class="block" id="qabulxona">
+      <h2>Rahbarning virtual qabulxonasi</h2>
+      <p>Rahbariyatga to‘g‘ridan-to‘g‘ri murojaat qilish uchun alohida shakl. Murojaat tartibi yuqoridagi bilan bir xil.</p>
+      <a class="btn btn-ghost" href="#murojaat">Murojaat yuborish</a>
+    </section>
+
+    <section class="block" id="korrupsiya">
+      <h2>Korrupsiyaga qarshi kurashish</h2>
+      <p>Korrupsiya holatlari haqida xabar berish tartibi, mas’ul shaxs va aloqa ma’lumotlari bu yerda e’lon qilinadi.</p>
+      <dl class="spec">
+        <dt>Ishonch telefoni</dt><dd class="ph">[tasdiqlansin]</dd>
+        <dt>E-pochta</dt><dd class="ph">[tasdiqlansin]</dd>
+        <dt>Mas’ul bo‘lim</dt><dd class="ph">[tasdiqlansin]</dd>
+      </dl>
+    </section>
+
+    <section class="block" id="hujjat">
+      <h2>Hujjatlar</h2>
+      <div class="tablewrap">
+      <table class="t">
+        <thead><tr><th>Hujjat</th><th>Sana</th><th>Raqam</th><th>Fayl</th></tr></thead>
+        <tbody id="doc-body">
+          <tr><td>Prezidentning Akademiya to‘g‘risidagi qarori</td><td>16.10.2026</td><td>PQ-378</td><td><a class="doc-btn" href="#">Yuklab olish</a></td></tr>
+          <tr><td>Registrator ofisi namunaviy nizomi (buyruq)</td><td>24.02.2025</td><td>73</td><td><a class="doc-btn" href="#">Yuklab olish</a></td></tr>
+          <tr><td class="ph">[Hujjat nomi]</td><td class="ph">[sana]</td><td class="ph">[raqam]</td><td><a class="doc-btn" href="#">Yuklab olish</a></td></tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <section class="block" id="hisobot">
+      <h2>Hisobotlar</h2>
+      <div class="tablewrap">
+      <table class="t">
+        <thead><tr><th>Hisobot</th><th>Davr</th><th>Fayl</th></tr></thead>
+        <tbody id="rep-body">
+          <tr><td class="ph">[Hisobot nomi]</td><td class="ph">[davr]</td><td><a class="doc-btn" href="#">Yuklab olish</a></td></tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <section class="block" id="xarid">
+      <h2>Xaridlar va tenderlar</h2>
+      <div class="tablewrap">
+      <table class="t">
+        <thead><tr><th>Xarid</th><th>Muddat</th><th>Holat</th></tr></thead>
+        <tbody id="proc-body">
+          <tr><td class="ph">[Xarid nomi]</td><td class="ph">[sana]</td><td><span class="status">Ochiq</span></td></tr>
+          <tr><td class="ph">[Xarid nomi]</td><td class="ph">[sana]</td><td><span class="status">Yakunlangan</span></td></tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+  </div>
+</div>
+</main>
+
+<div id="site-foot"></div>
+<script>window.PAGE_TITLE={uz:"Ochiqlik — TIFA (prototip)",en:"Transparency — TIFA (prototype)",ru:"Открытость — TIFA (прототип)",fr:"Transparence — TIFA (prototype)"};</script>
+<script src="assets/i18n.js"></script><script src="assets/i18n-pages.js"></script><script src="assets/site.js"></script><script src="assets/cms.js"></script>
+<script>
+document.getElementById('appeal').addEventListener('submit',e=>{
+  e.preventDefault();const f=e.target;
+  if(!f.checkValidity()){f.reportValidity();return}
+  f.querySelector('.ok').style.display='block';f.reset();
+});
+</script>
+</body>
+</html>

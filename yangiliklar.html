@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yangiliklar — TIFA (prototip)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="yangilik">
+<div id="site-top"></div>
+
+<!-- SHABLON: yangiliklar ro'yxati -->
+<div class="pagehead">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Bosh sahifa</a><span>/</span>Yangiliklar</div>
+    <h1>Yangiliklar</h1>
+    <p>Akademiya yangiliklari, e’lonlar, tadbirlar va moda madaniyati haqida maqolalar.</p>
+  </div>
+</div>
+
+<main data-cms="news-list">
+<div class="wrap layout two">
+  <div>
+    <div class="filters" style="padding-top:0" role="toolbar" aria-label="Filtr">
+      <button class="pill on" data-type="all">Hammasi</button>
+      <button class="pill" data-type="news">Yangiliklar</button>
+      <button class="pill" data-type="notice">E’lonlar</button>
+      <button class="pill" data-type="event">Tadbirlar</button>
+      <button class="pill" data-type="journal">Jurnal</button>
+    </div>
+
+    <div class="gal" id="gal" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))">
+      <a class="card c1" data-type="news" href="yangilik.html"><div class="img"><span>[Foto]</span></div><div class="cap"><span class="kind">Yangilik</span><b class="ph">[Yangilik sarlavhasi]</b><small class="date">[sana]</small></div></a>
+      <a class="card c2" data-type="news" href="yangilik.html"><div class="img"><span>[Foto]</span></div><div class="cap"><span class="kind">Yangilik</span><b class="ph">[Yangilik sarlavhasi]</b><small class="date">[sana]</small></div></a>
+      <a class="card c3" data-type="notice" href="yangilik.html"><div class="img"><span>[Foto]</span></div><div class="cap"><span class="kind">E’lon</span><b class="ph">[E’lon sarlavhasi]</b><small class="date">[sana]</small></div></a>
+      <a class="card c4" data-type="event" href="yangilik.html"><div class="img"><span>[Foto]</span></div><div class="cap"><span class="kind">Tadbir</span><b class="ph">[Tadbir nomi]</b><small class="date">[sana]</small></div></a>
+      <a class="card c5" data-type="journal" href="yangilik.html"><div class="img"><span>[Foto]</span></div><div class="cap"><span class="kind">Jurnal</span><b class="ph">[Maqola sarlavhasi]</b><small class="date">[sana]</small></div></a>
+      <a class="card c6" data-type="news" href="yangilik.html"><div class="img"><span>[Foto]</span></div><div class="cap"><span class="kind">Yangilik</span><b class="ph">[Yangilik sarlavhasi]</b><small class="date">[sana]</small></div></a>
+    </div>
+    <div class="empty" id="empty">Bu bo‘limda materiallar hali yo‘q.</div>
+    <div class="more-row"><button class="btn btn-ghost" type="button">Yana yuklash</button></div>
+    <p class="note" style="margin-bottom:30px">Kartochkalar namunaviy. Axborot xizmati haftasiga kamida 2–3 nashr tayyorlaydi.</p>
+  </div>
+
+  <aside class="stack">
+    <div class="box" id="events">
+      <h3>Yaqin tadbirlar</h3>
+      <div class="evt"><div class="d">[sana]</div><div><b>Ochiq eshiklar kuni</b><br><span class="note">Vaqt tasdiqlanadi</span></div></div>
+      <div class="evt"><div class="d">[sana]</div><div><b>Ijodiy imtihon</b><br><span class="note">Vaqt tasdiqlanadi</span></div></div>
+      <a class="btn btn-ghost" href="#">Tadbirlar kalendari</a>
+    </div>
+    <div class="box accent">
+      <h3>Matbuot xizmati</h3>
+      <p class="note">Jurnalistlar uchun: izoh, fotomateriallar va akkreditatsiya.</p>
+      <dl class="spec" style="margin-top:10px">
+        <dt>E-pochta</dt><dd class="ph">press@____.uz</dd>
+        <dt>Telefon</dt><dd class="ph">[tasdiqlansin]</dd>
+      </dl>
+      <a class="btn btn-primary" href="#">Media to‘plam</a>
+    </div>
+  </aside>
+</div>
+</main>
+
+<div id="site-foot"></div>
+<script>window.PAGE_TITLE={uz:"Yangiliklar — TIFA (prototip)",en:"News — TIFA (prototype)",ru:"Новости — TIFA (прототип)",fr:"Actualités — TIFA (prototype)"};</script>
+<script src="assets/i18n.js"></script><script src="assets/i18n-pages.js"></script><script src="assets/site.js"></script><script src="assets/cms.js"></script>
+</body>
+</html>

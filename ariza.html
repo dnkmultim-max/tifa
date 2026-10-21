@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ariza topshirish — TIFA (prototip)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="ariza">
+<div id="site-top"></div>
+
+<!-- SHABLON: ariza topshirish. Ariza o'zi qabul portalida topshiriladi; bu sahifa tayyorgarlik va yo'naltirish uchun. -->
+<div class="pagehead">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Bosh sahifa</a><span>/</span><a href="qabul.html">Qabul</a><span>/</span>Ariza topshirish</div>
+    <h1>Ariza topshirish</h1>
+    <p>Ariza qabul portalida topshiriladi. Avval hamma narsa tayyorligini tekshiring.</p>
+  </div>
+</div>
+
+<main>
+<div class="wrap" style="padding-top:36px">
+  <div class="stepper" aria-label="Qadamlar">
+    <div><b>1. Ma’lumot so‘rang</b>Savollaringizga javob oling</div>
+    <div><b>2. Tashrif buyuring</b>Ochiq eshiklar kuni</div>
+    <div class="now"><b>3. Ariza topshiring</b>Qabul portalida</div>
+  </div>
+
+  <div class="layout two" style="padding-top:0">
+    <div>
+      <section class="block">
+        <h2>Topshirishdan oldin tekshiring</h2>
+        <div class="checks" id="checks">
+          <label><input type="checkbox"> Yo‘nalishni tanladim</label>
+          <label><input type="checkbox"> Qabul talablari bilan tanishdim</label>
+          <label><input type="checkbox"> Kerakli hujjatlarim tayyor</label>
+          <label><input type="checkbox"> Portfolio tayyor</label>
+          <label><input type="checkbox"> Ijodiy imtihon sanasini bilaman</label>
+        </div>
+        <a class="btn btn-primary" id="go" href="#" data-cms-link="portal" aria-disabled="true">Qabul portaliga o‘tish</a>
+        <p class="note" style="margin-top:10px">Tugma barcha bandlar belgilanganda faollashadi. Ariza va shaxsiy ma’lumotlar sayt orqali emas, himoyalangan portal orqali o‘tadi.</p>
+      </section>
+
+      <section class="block">
+        <h2>Ariza holatini bilish</h2>
+        <p>Ariza holati va qabul natijalari qabul portalida ko‘rinadi. Qabul qilinganlar keyin HEMIS’ga o‘tkaziladi.</p>
+        <a class="btn btn-ghost" href="#">Portalga kirish</a>
+      </section>
+    </div>
+
+    <aside class="stack">
+      <div class="box accent">
+        <h3>Savolingiz bormi?</h3>
+        <form class="form" id="ask" novalidate>
+          <label>Ism<input type="text" name="name" required autocomplete="name"></label>
+          <label>Telefon<input type="tel" name="phone" required autocomplete="tel"></label>
+          <label>Yo‘nalish
+            <select name="prog"><option>Dizayn (bakalavriat)</option></select>
+          </label>
+          <label class="consent"><input type="checkbox" required> Shaxsiy ma’lumotlarimni qayta ishlashga roziman.</label>
+          <button class="btn btn-primary" type="submit">Ma’lumot so‘rash</button>
+          <div class="ok" role="status">So‘rovingiz qabul qilindi. (Namunaviy xabar: forma hali ulanmagan.)</div>
+        </form>
+      </div>
+      <div class="box">
+        <h3>Boshqa yo‘llar</h3>
+        <a class="btn btn-ghost" href="#" data-cms-link="telegram">Telegram-bot</a>
+        <a class="btn btn-ghost" href="#">Prospektni yuklab olish</a>
+        <a class="btn btn-ghost" href="qabul.html#muddatlar">Ochiq eshiklar kuniga yozilish</a>
+      </div>
+    </aside>
+  </div>
+</div>
+</main>
+
+<div id="site-foot"></div>
+<script>window.PAGE_TITLE={uz:"Ariza topshirish — TIFA (prototip)",en:"Apply — TIFA (prototype)",ru:"Подать заявку — TIFA (прототип)",fr:"Candidater — TIFA (prototype)"};</script>
+<script src="assets/i18n.js"></script><script src="assets/i18n-pages.js"></script><script src="assets/site.js"></script><script src="assets/cms.js"></script>
+<script>
+(function(){
+  const boxes=[...document.querySelectorAll('#checks input')],go=document.getElementById('go');
+  const upd=()=>go.setAttribute('aria-disabled',boxes.every(b=>b.checked)?'false':'true');
+  boxes.forEach(b=>b.addEventListener('change',upd));upd();
+  document.getElementById('ask').addEventListener('submit',e=>{
+    e.preventDefault();const f=e.target;if(!f.checkValidity()){f.reportValidity();return}
+    f.querySelector('.ok').style.display='block';f.reset();
+  });
+})();
+</script>
+</body>
+</html>

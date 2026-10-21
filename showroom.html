@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Showroom — TIFA (prototip)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="showroom">
+<div id="site-top"></div>
+
+<div class="pagehead">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Bosh sahifa</a><span>/</span>Showroom</div>
+    <h1>Showroom</h1>
+    <p>Talaba kolleksiyalari, shoular va yillar bo‘yicha arxiv. Akademiyaning asosiy vitrinasi.</p>
+  </div>
+</div>
+
+<main data-cms="showroom">
+<div class="wrap">
+
+  <div class="feature">
+    <div class="img"><span>[So‘nggi shou: asosiy foto yoki video]</span></div>
+    <div class="txt">
+      <span class="kind" style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bordo);font-weight:600">So‘nggi shou</span>
+      <h2 style="font-size:1.6rem">[Shou nomi]</h2>
+      <p class="note" style="font-size:.9rem">Sana · joy · ishtirokchilar soni</p>
+      <div><a class="btn btn-primary" href="shou.html">Shouni ko‘rish</a></div>
+    </div>
+  </div>
+
+  <div class="filters" role="toolbar" aria-label="Filtr">
+    <button class="pill on" data-type="all">Hammasi</button>
+    <button class="pill" data-type="collection">Kolleksiyalar</button>
+    <button class="pill" data-type="show">Shoular</button>
+    <select id="year" aria-label="Yil">
+      <option value="all">Barcha yillar</option>
+      <option value="2028">2028</option>
+      <option value="2027">2027</option>
+      <option value="2026">2026</option>
+    </select>
+  </div>
+
+  <div class="gal" id="gal">
+    <a class="card c1" data-type="collection" data-year="2027" href="kolleksiya.html"><div class="img"><span>[Foto]</span></div><div class="cap"><span class="kind">Kolleksiya</span><b class="ph">[Kolleksiya nomi]</b><small>[F.I.Sh.] · 2027</small></div></a>
+    <a class="card c2" data-type="collection" data-year="2027" href="kolleksiya.html"><div class="img"><span>[Foto]</span></div><div class="cap"><span class="kind">Kolleksiya</span><b class="ph">[Kolleksiya nomi]</b><small>[F.I.Sh.] · 2027</small></div></a>
+    <a class="card c3" data-type="collection" data-year="2027" href="kolleksiya.html"><div class="img"><span>[Foto]</span></div><div class="cap"><span class="kind">Kolleksiya</span><b class="ph">[Kolleksiya nomi]</b><small>[F.I.Sh.] · 2027</small></div></a>
+    <a class="card c4 show" data-type="show" data-year="2027" href="shou.html"><div class="img"><span>[Shou fotosi]</span></div><div class="cap"><span class="kind">Shou</span><b class="ph">[Shou nomi]</b><small>[sana] · 2027</small></div></a>
+    <a class="card c5" data-type="collection" data-year="2026" href="kolleksiya.html"><div class="img"><span>[Foto]</span></div><div class="cap"><span class="kind">Kolleksiya</span><b class="ph">[Kolleksiya nomi]</b><small>[F.I.Sh.] · 2026</small></div></a>
+    <a class="card c6 show" data-type="show" data-year="2026" href="shou.html"><div class="img"><span>[Shou fotosi]</span></div><div class="cap"><span class="kind">Shou</span><b class="ph">[Shou nomi]</b><small>[sana] · 2026</small></div></a>
+  </div>
+  <div class="empty" id="empty">Bu tanlov bo‘yicha materiallar hali yo‘q.</div>
+  <p class="note" style="margin:14px 0 40px">Kartochkalar namunaviy. Akademiya 2026 yilda faoliyatini boshlagani uchun dastlab arxiv qisqa bo‘ladi.</p>
+</div>
+
+<section style="background:var(--bordo-soft);padding:44px 0">
+  <div class="wrap" style="display:grid;gap:10px;justify-items:start">
+    <h2>Hamkor brendlar va ish beruvchilar</h2>
+    <p class="lead">Talabalar bilan loyiha, amaliyot yoki kolleksiya bo‘yicha hamkorlik qiling.</p>
+    <a class="btn btn-primary" href="#">Hamkorlik qilish</a>
+  </div>
+</section>
+</main>
+
+<div id="site-foot"></div>
+<script>window.PAGE_TITLE={uz:"Showroom — TIFA (prototip)",en:"Showroom — TIFA (prototype)",ru:"Showroom — TIFA (прототип)",fr:"Showroom — TIFA (prototype)"};</script>
+<script src="assets/i18n.js"></script><script src="assets/i18n-pages.js"></script><script src="assets/site.js"></script><script src="assets/cms.js"></script>
+</body>
+</html>
